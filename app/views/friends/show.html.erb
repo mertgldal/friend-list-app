@@ -1,0 +1,24 @@
+
+
+<div class="p-5 mb-4 bg-light rounded-3">
+
+  <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold"><%=@friend.first_name%> <%=@friend.last_name%></h1>
+    <br>
+    <p class="lead"><%= @friend.email %>  |
+      <%= @friend.phone %>  |
+      <%= @friend.twitter %></p>
+    <br><br>
+    <div>
+      <%= link_to "Edit this friend", edit_friend_path(@friend), class:"btn btn-secondary"%>
+      <%= link_to 'Delete', @friend ,class: 'btn btn-danger', data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, style:"position:relative; left: 13px" %>
+      <%= link_to "Back to friends", friends_path, class:"btn btn-secondary", style:"position:relative; left: 26px" %>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
